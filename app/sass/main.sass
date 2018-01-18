@@ -1,2 +1,31 @@
 @import mixins
 @import normalize
+@import vars
+@import libs
+
+body 	
+    font: $font-weight $font-size/$line-height $font-family, Arial, sans-serif
+
+    color: $color
+    background: #fff
+
+.main-wrapper
+    position: relative    
+
+    overflow: hidden
+
+    min-width: 320px
+    min-height: 100%    
+    padding: 0
+
+    opacity: 1
+
+img
+    display: block
+
+    max-width: 100%
+
+span 
+    display: inline-block
+
+@import 'sections/header.sass'
