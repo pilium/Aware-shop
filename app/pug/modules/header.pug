@@ -3,7 +3,7 @@ header.header
 		a(href="#")
 			img(src="img/logo.png" alt="")
 	ul.main-menu
-		li.main-menu__item
+		li.main-menu__item.dropdown
 			a.main-menu__link(href="#")
 				| Men 
 				span.icon-caret
@@ -41,7 +41,7 @@ header.header
 						a.dropdown-menu__link(href="#") Sunglasses
 					li.dropdown-menu__item
 						a.dropdown-menu__link(href="#") Swimwear
-		li.main-menu__item
+		li.main-menu__item.dropdown
 			a.main-menu__link(href="#")
 				| Women 
 				span.icon-caret
@@ -59,7 +59,7 @@ header.header
 						a.dropdown-menu__link(href="#") Sunglasses
 					li.dropdown-menu__item
 						a.dropdown-menu__link(href="#") Swimwear
-		li.main-menu__item
+		li.main-menu__item.dropdown
 			a.main-menu__link(href="#")
 				| Kids 
 				span.icon-caret
@@ -77,7 +77,7 @@ header.header
 						a.dropdown-menu__link(href="#") Jackets & Coats
 					li.dropdown-menu__item
 						a.dropdown-menu__link(href="#") Rompers & Jumpsuits
-		li.main-menu__item
+		li.main-menu__item.dropdown
 			a.main-menu__link(href="#")
 				| Accessories 
 				span.icon-caret
@@ -110,3 +110,39 @@ header.header
 	.location
 		span.icon-pin
 		a.location__link(href="#") Uzbekistan / $
+	ul.profile-menu
+		li.profile-menu__item.dropdown.dropdown--right.dropdown--white
+			a.profile-menu__link(href="#")
+				span.basket
+					span.icon-bag
+					span.badge 3
+				span.b-price $165
+			.dropdown-content
+				ul.dropdown-menu
+					li.dropdown-menu__item
+						a.dropdown-menu__link(href="#") Shirts
+					li.dropdown-menu__item
+						a.dropdown-menu__link(href="#") Shoes, Boots & Trainers
+					li.dropdown-menu__item
+						a.dropdown-menu__link(href="#") Shorts
+					li.dropdown-menu__item
+						a.dropdown-menu__link(href="#") Suits & Blazers
+					li.dropdown-menu__item
+						a.dropdown-menu__link(href="#") Sunglasses
+					li.dropdown-menu__item
+						a.dropdown-menu__link(href="#") Swimwear
+		li.profile-menu__item.dropdown.dropdown--right.dropdown--white
+			a.profile-menu__link(href="#")
+				span.icon-user
+			.dropdown-content
+				ul.user-menu
+					li.user-menu__item
+						a.user-menu__link(href="#") Profile
+					li.user-menu__item
+						a.user-menu__link(href="#") Wishlist
+					li.user-menu__item
+						a.user-menu__link(href="#") Orders
+					li.user-menu__item
+						a.user-menu__link(href="#") Settings
+					li.user-menu__item
+						a.user-menu__link(href="#") Log out
