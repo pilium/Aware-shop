@@ -1,0 +1,10 @@
+mixin dropdown(liClass, aClass, text)
+    li(class= liClass)
+        a(class = aClass href="#")= text
+
+mixin navLink(link, name, dropdown)
+    if(dropdown === true)
+        a.main-menu__link(href= link) #{name}
+                span.icon-caret
+    else
+        a.main-menu__link(href= link) #{name}

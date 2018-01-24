@@ -27,6 +27,8 @@
     "gulp-util": "^3.0.8",
     "gulp.spritesmith": "^6.5.0",
     "node-sass": "^4.7.2",
+    "svgmin": "^0.1.0",
+    "svgstore": "^2.0.2",
     "vinyl-ftp": "^0.6.0"
   },
   "dependencies": {}

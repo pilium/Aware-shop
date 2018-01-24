@@ -3,106 +3,64 @@ header.header
 		a(href="#")
 			img(src="img/logo.png" alt="")
 	ul.main-menu
+		
 		li.main-menu__item.dropdown
-			a.main-menu__link(href="#")
-				| Men 
-				span.icon-caret
+			+navLink('#', 'Men', true)
 			.dropdown-content
 				ul.dropdown-menu
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Bags
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Caps & Hats
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Gifts
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Grooming
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Hoodies & Sweatshirts
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Jackets & Coats
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Jeans
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Jewellery
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Joggers
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Jumpers & Cardigans
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Leather Jackets
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Long Sleeve T-Shirts
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Loungewear
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Polo Shirts
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Sunglasses
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Swimwear
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Bags')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Caps & Hats')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Gifts')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Grooming')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Hoodies & Sweatshirts')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Jackets & Coats')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Jeans')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Jewellery')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Joggers')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Jumpers & Cardigans')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Leather Jackets')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Long Sleeve T-Shirts')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Loungewear')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Sunglasses')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Polo Shirts')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Swimwear')
 		li.main-menu__item.dropdown
-			a.main-menu__link(href="#")
-				| Women 
-				span.icon-caret
+			+navLink('#', 'Women', true)
 			.dropdown-content
 				ul.dropdown-menu
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Shirts
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Shoes, Boots & Trainers
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Shorts
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Suits & Blazers
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Sunglasses
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Swimwear
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Shirts')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Shoes, Boots & Trainers')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Shorts')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Suits & Blazers')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Sunglasses')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Swimwear')
 		li.main-menu__item.dropdown
-			a.main-menu__link(href="#")
-				| Kids 
-				span.icon-caret
+			+navLink('#', 'Kids', true)
 			.dropdown-content
 				ul.dropdown-menu
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") New Arrivals
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Dresses
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Tops
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Sweaters & Knits
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Jackets & Coats
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Rompers & Jumpsuits
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'New Arrivals')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Dresses')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Tops')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Sweaters & Knits')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Jackets & Coats')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Rompers & Jumpsuits')
 		li.main-menu__item.dropdown
-			a.main-menu__link(href="#")
-				| Accessories 
-				span.icon-caret
+			+navLink('#', 'Accessories', true)
 			.dropdown-content
 				ul.dropdown-menu
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Hair Accessories
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Sunglasses & Readers
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Socks & Tights
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Hats
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Scarves & Gloves
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Jackets & Coats
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Rompers & Jumpsuits
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Hair Accessories')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Sunglasses & Readers')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Socks & Tights')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Hats')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Scarves & Gloves')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Jackets & Coats')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Rompers & Jumpsuits')
 		li.main-menu__item
-			a.main-menu__link(href="#") Sale
+			+navLink('#', 'Sale', false)
 		li.main-menu__item
-			a.main-menu__link(href="#") LookBook
+			+navLink('#', 'LookBook', false) 
 		li.main-menu__item
-			a.main-menu__link(href="#") Blog
+			+navLink('#', 'Blog', false)
 	.search
 		form(action="#")
 			input.form-control.search__input(type="text" placeholder="Search")
@@ -119,30 +77,19 @@ header.header
 				span.b-price $165
 			.dropdown-content
 				ul.dropdown-menu
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Shirts
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Shoes, Boots & Trainers
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Shorts
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Suits & Blazers
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Sunglasses
-					li.dropdown-menu__item
-						a.dropdown-menu__link(href="#") Swimwear
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Shirts')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Shoes, Boots & Trainers')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Shorts')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Suits & Blazers')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Sunglasses')
+					+dropdown('dropdown-menu__item', 'dropdown-menu__link', 'Swimwear')
 		li.profile-menu__item.dropdown.dropdown--right.dropdown--white
 			a.profile-menu__link(href="#")
 				span.icon-user
 			.dropdown-content
 				ul.user-menu
-					li.user-menu__item
-						a.user-menu__link(href="#") Profile
-					li.user-menu__item
-						a.user-menu__link(href="#") Wishlist
-					li.user-menu__item
-						a.user-menu__link(href="#") Orders
-					li.user-menu__item
-						a.user-menu__link(href="#") Settings
-					li.user-menu__item
-						a.user-menu__link(href="#") Log out
+					+dropdown('user-menu__item', 'user-menu__link', 'Profile')
+					+dropdown('user-menu__item', 'user-menu__link', 'Wishlist')
+					+dropdown('user-menu__item', 'user-menu__link', 'Orders')
+					+dropdown('user-menu__item', 'user-menu__link', 'Settings')
+					+dropdown('user-menu__item', 'user-menu__link', 'Log out')
