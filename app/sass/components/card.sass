@@ -1,0 +1,63 @@
+.cart
+	width: 300px
+	&-list 
+		list-style: none
+		&__item 
+			display: flex
+			align-items: center
+			border-bottom: 1px solid #ececec
+			padding: 10px
+		&__img 
+			width: 60px
+			margin-right: 20px
+			flex: none
+			text-align: center
+			img 
+				display: inline-block
+				max-width: 100%
+		&__info 
+			flex: 1
+			.product__title 
+				margin-bottom: 10px
+		&__details 
+			display: flex
+			align-items: center
+			justify-content: space-between
+			.price
+				margin-right: 10px
+		&__delete 
+			padding: 0 10px 0 0
+			margin-left: 20px
+			flex: none
+			color: #b6b6b6
+			font-size: 12px
+			a
+				color: inherit
+				&:hover 
+					color: $color
+	&-footer 
+		display: flex
+		align-items: center
+		padding: 20px 10px
+		.total 
+			width: 60px
+			flex: none
+			margin-right: 20px
+			text-align: right
+		.price 
+			margin-right: 28px
+.price 
+	color: $color
+	font-family: $font-family2, sans-serif
+	font-size: 12px
+	font-weight: 700
+	letter-spacing: 1.2px
+	&--danger 
+		color: $color-danger
+
+.total	
+	color: #b8b8b8
+	font-family: $font-family3, sans-serif
+	font-size: 12px
+	font-style: italic
+	line-height: 18px

@@ -1,0 +1,58 @@
+ul.main-menu
+	li.main-menu__item.dropdown
+		+navLink('#', 'Men', true)
+		.dropdown-content
+			ul.dropdown-menu
+				+dropdown('Bags')
+				+dropdown('Caps & Hats')
+				+dropdown('Gifts')
+				+dropdown('Grooming')
+				+dropdown('Hoodies & Sweatshirts')
+				+dropdown('Jackets & Coats')
+				+dropdown('Jeans')
+				+dropdown('Jewellery')
+				+dropdown('Joggers')
+				+dropdown('Jumpers & Cardigans')
+				+dropdown('Leather Jackets')
+				+dropdown('Long Sleeve T-Shirts')
+				+dropdown('Loungewear')
+				+dropdown('Sunglasses')
+				+dropdown('Polo Shirts')
+				+dropdown('Swimwear')
+	li.main-menu__item.dropdown
+		+navLink('#', 'Women', true)
+		.dropdown-content
+			ul.dropdown-menu
+				+dropdown('Shirts')
+				+dropdown('Shoes, Boots & Trainers')
+				+dropdown('Shorts')
+				+dropdown('Suits & Blazers')
+				+dropdown('Sunglasses')
+				+dropdown('Swimwear')
+	li.main-menu__item.dropdown
+		+navLink('#', 'Kids', true)
+		.dropdown-content
+			ul.dropdown-menu
+				+dropdown('New Arrivals')
+				+dropdown('Dresses')
+				+dropdown('Tops')
+				+dropdown('Sweaters & Knits')
+				+dropdown('Jackets & Coats')
+				+dropdown('Rompers & Jumpsuits')
+	li.main-menu__item.dropdown
+		+navLink('#', 'Accessories', true)
+		.dropdown-content
+			ul.dropdown-menu
+				+dropdown('Hair Accessories')
+				+dropdown('Sunglasses & Readers')
+				+dropdown('Socks & Tights')
+				+dropdown('Hats')
+				+dropdown('Scarves & Gloves')
+				+dropdown('Jackets & Coats')
+				+dropdown('Rompers & Jumpsuits')
+	li.main-menu__item
+		+navLink('#', 'Sale', false)
+	li.main-menu__item
+		+navLink('#', 'LookBook', false) 
+	li.main-menu__item
+		+navLink('#', 'Blog', false)

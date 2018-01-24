@@ -1,10 +1,42 @@
-mixin dropdown(liClass, aClass, text)
-    li(class= liClass)
-        a(class = aClass href="#")= text
+//- Для выпалающих списков , кроме Меню пользователя - user-menu
+mixin dropdown(text)
+    li.dropdown-menu__item
+        a.dropdown-menu__link(href="#")= text
 
+//- Главное меню
 mixin navLink(link, name, dropdown)
     if(dropdown === true)
         a.main-menu__link(href= link) #{name}
                 span.icon-caret
     else
         a.main-menu__link(href= link) #{name}
+
+//- Добавление карточек товаров (корзина)
+mixin addCard(imgLink, img, title, price, size, color, pcs, pricemod)
+    - mod = pricemod || ''
+    li.cart-list__item
+        .cart-list__img
+            a(href= imgLink)
+                img(src=`img/${img}.png` alt="")
+        .cart-list__info
+            h6.product__title
+                a(href="#")= title
+            .cart-list__details
+                span(class="price price--" + mod)= price
+                span.product__details
+                    span= size
+                    |  • 
+                    span= color
+                    |  • 
+                    span #{pcs} pcs
+        .cart-list__delete
+            a.js-remove-cart(href="#")
+                span.icon-close
+                    span.path1
+                    span.path2
+
+//- Добавление "хлебных крошек"
+mixin addBreadcrumbs(link , text)
+    li.bread-crambs__item
+        a.bread-crambs__link(href= link)= text
+        |  /
