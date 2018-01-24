@@ -22,7 +22,7 @@ mixin addCard(imgLink, img, title, price, size, color, pcs, pricemod)
             h6.product__title
                 a(href="#")= title
             .cart-list__details
-                span(class="price price--" + mod)= price
+                span(class="price " + mod)= price
                 span.product__details
                     span= size
                     |  • 
