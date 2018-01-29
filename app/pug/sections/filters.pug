@@ -1,0 +1,33 @@
+.tab-wrap
+	.filter
+		.filter-sidebar
+			button.toggle-filter
+				span.icon-sliders
+				span.sr-only Filters
+			span.filter__title 34 items found
+		.filter-content
+			span.filter__title Sort by
+			.sort
+				input#sort1(type="radio" name="sort")
+				label.sort__item(for="sort1")
+					| Price 
+					span.icon-arrow-up-down
+						span.path1
+						span.path2
+				input#sort2(type="radio" name="sort" checked="")
+				label.sort__item(for="sort2")
+					| Name 
+					span.icon-data-transmission-bottom
+				input#sort3(type="radio" name="sort")
+				label.sort__item(for="sort3")
+					| Date 
+					span.icon-arrow-up-down
+						span.path1
+						span.path2
+			ul.filter-list.tabs
+				li.filter-list__item
+					a.filter-list__link(href="#tab_1")
+						span.icon-list-2
+				li.filter-list__item.active
+					a.filter-list__link(href="#tab_2")
+						span.icon-list

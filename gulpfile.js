@@ -33,6 +33,7 @@ gulp.task('pug', function() {
 
 gulp.task('js', function() {
   return gulp.src([
+    'node_modules/jquery/dist/jquery.min.js',
     'app/js/common.js' // Всегда в конце
   ])
 		.pipe(plumber())
