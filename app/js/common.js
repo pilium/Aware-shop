@@ -10,9 +10,6 @@ $(function(){
 		$(this).parent().addClass('active');
 		return false
 	});
-
-	
-
 });
 
    
