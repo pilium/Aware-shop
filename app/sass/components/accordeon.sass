@@ -1,0 +1,28 @@
+.accordion
+	border-bottom: 1px solid #ececec
+	&__head
+		height: 70px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 15px 30px
+		border-top: 1px solid #ececec
+		cursor: pointer
+		&.open 
+			[class*="icon"]:before 
+				content: '\e909'
+		&:first-child 
+			border-top: none
+		[class*="icon"]
+			color: #b8b8b8
+			font-size: 18px
+			margin-left: 10px
+	&__title 
+		font-family: $font-family2
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+		letter-spacing: 1.4px
+
+	&__body 
+		padding: 0 30px 25px
