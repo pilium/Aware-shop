@@ -145,7 +145,7 @@
       <section class="header-inner" style="background-image: url('img/header-inner.png');">
         <ul class="bread-crambs bread-crambs--header-inner">
               <li class="bread-crambs__item"><a class="bread-crambs__link" href="#">Home</a> /</li>
-              <li class="bread-crambs__item"><a class="bread-crambs__link" href="#">men</a> /</li>
+              <li class="bread-crambs__item"><a class="bread-crambs__link" href="#">Men</a> /</li>
         </ul><span class="category">men</span>
         <h1 class="header-inner__title">Polo Shirts</h1>
       </section>
@@ -176,29 +176,139 @@
             <div class="accordion__head open">
               <h5 class="accordion__title">Category</h5><span class="icon-minus"></span>
             </div>
-            <div class="accordion__body"></div>
+            <div class="accordion__body">
+              <ul class="check-list">
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="1">
+                      <label class="check-list__text" for="1">Bags</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="2">
+                      <label class="check-list__text" for="2">Belts</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="3">
+                      <label class="check-list__text" for="3">Hats, Scarves &amp; Gloves</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="4">
+                      <label class="check-list__text" for="4">Sunglasses</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="5">
+                      <label class="check-list__text" for="5">Watches</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="6">
+                      <label class="check-list__text" for="6">Wallets</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="7">
+                      <label class="check-list__text" for="7">Boat Shoes</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="8">
+                      <label class="check-list__text" for="8">Boots</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="9">
+                      <label class="check-list__text" for="9">Deserts &amp; Chukkas</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="10">
+                      <label class="check-list__text" for="10">Espadrilles &amp; Sandals</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="11">
+                      <label class="check-list__text" for="11">Flip Flops</label>
+                    </li>
+              </ul>
+            </div>
             <div class="accordion__head">
               <h5 class="accordion__title">Brand</h5><span class="icon-minus"></span>
             </div>
-            <div class="accordion__body" style="display: none;"></div>
+            <div class="accordion__body" style="display: none;">
+              <ul class="check-list">
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="12">
+                      <label class="check-list__text" for="12">Text 1</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="13">
+                      <label class="check-list__text" for="13">Text 2</label>
+                    </li>
+              </ul>
+            </div>
             <div class="accordion__head">
               <h5 class="accordion__title">Size</h5><span class="icon-minus"></span>
             </div>
-            <div class="accordion__body" style="display: none;"></div>
+            <div class="accordion__body" style="display: none;">
+              <ul class="check-list check-list--column">
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="14">
+                      <label class="check-list__text" for="14">S</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="15">
+                      <label class="check-list__text" for="15">XL</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="16">
+                      <label class="check-list__text" for="16">M</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="17">
+                      <label class="check-list__text" for="17">XXL</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="18">
+                      <label class="check-list__text" for="18">L</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="19">
+                      <label class="check-list__text" for="19">XXXL</label>
+                    </li>
+              </ul>
+            </div>
             <div class="accordion__head">
               <h5 class="accordion__title">Price</h5><span class="icon-minus"></span>
             </div>
             <div class="accordion__body" style="display: none;">
-              <div id="slider-range"></div>
-              <input id="amount" type="text" readonly="" style="border:0; color:#f6931f; font-weight:bold;">
-              <input id="amount1" type="text" readonly="" style="border:0; color:#f6931f; font-weight:bold;">
+              <div class="noUi-target noUi-ltr noUi-horizontal" id="slider"></div><span class="slider-value slider-value-min" id="amount"></span><span class="slider-value slider-value-max" id="amount1"></span>
             </div>
             <div class="accordion__head">
-              <h5 class="accordion__title">Brand</h5><span class="icon-minus"></span>
+              <h5 class="accordion__title">Color</h5><span class="icon-minus"></span>
             </div>
-            <div class="accordion__body" style="display: none;">22</div>
+            <div class="accordion__body" style="display: none;">
+              <ul class="check-list check-list--column">
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="20">
+                      <label class="check-list__text" for="20">Badge</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="21">
+                      <label class="check-list__text" for="21">Blue</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="22">
+                      <label class="check-list__text" for="22">Red</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="23">
+                      <label class="check-list__text" for="23">green</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="24">
+                      <label class="check-list__text" for="24">Yellow</label>
+                    </li>
+                    <li class="check-list__item">
+                      <input class="styled-checkbox" type="checkbox" value="value1" id="25">
+                      <label class="check-list__text" for="25">Purple</label>
+                    </li>
+              </ul>
+            </div>
             <div class="accordion__head">
-              <h5 class="accordion__title">Brand</h5><span class="icon-minus"></span>
+              <h5 class="accordion__title">Style</h5><span class="icon-minus"></span>
             </div>
             <div class="accordion__body" style="display: none;">22</div>
           </div>

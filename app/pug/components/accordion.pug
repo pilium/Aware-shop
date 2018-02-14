@@ -3,29 +3,56 @@
 		h5.accordion__title Category
 		span.icon-minus
 	.accordion__body
-		
+		ul.check-list
+			+check-list('Bags', 1)
+			+check-list('Belts', 2)
+			+check-list('Hats, Scarves & Gloves', 3)
+			+check-list('Sunglasses', 4)
+			+check-list('Watches', 5)
+			+check-list('Wallets', 6)
+			+check-list('Boat Shoes', 7)
+			+check-list('Boots', 8)
+			+check-list('Deserts & Chukkas', 9)
+			+check-list('Espadrilles & Sandals', 10)
+			+check-list('Flip Flops', 11)
 	.accordion__head
 		h5.accordion__title Brand
 		span.icon-minus
 	.accordion__body(style="display: none;")
-		
+		ul.check-list
+			+check-list('Text 1', 12)
+			+check-list('Text 2', 13)
 	.accordion__head
 		h5.accordion__title Size
 		span.icon-minus
 	.accordion__body(style="display: none;")
-		
+		ul.check-list.check-list--column
+			+check-list('S', 14)
+			+check-list('XL', 15)
+			+check-list('M', 16)
+			+check-list('XXL', 17)
+			+check-list('L', 18)
+			+check-list('XXXL', 19)
 	.accordion__head
 		h5.accordion__title Price
 		span.icon-minus
 	.accordion__body(style="display: none;")
-		#slider-range
-		input#amount(type="text" readonly="" style="border:0; color:#f6931f; font-weight:bold;")
-		input#amount1(type="text" readonly="" style="border:0; color:#f6931f; font-weight:bold;")
+		#slider.noUi-target.noUi-ltr.noUi-horizontal
+		span#amount.slider-value.slider-value-min
+		span#amount1.slider-value.slider-value-max
+						
 	.accordion__head
-		h5.accordion__title Brand
+		h5.accordion__title Color
 		span.icon-minus
-	.accordion__body(style="display: none;") 22
+	.accordion__body(style="display: none;")
+		ul.check-list.check-list--column
+			+check-list('Badge', 20)
+			+check-list('Blue', 21)
+			+check-list('Red', 22)
+			+check-list('green', 23)
+			+check-list('Yellow', 24)
+			+check-list('Purple', 25)
 	.accordion__head
-		h5.accordion__title Brand
+		h5.accordion__title Style
 		span.icon-minus
 	.accordion__body(style="display: none;") 22

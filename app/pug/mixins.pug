@@ -40,3 +40,9 @@ mixin addBreadcrumbs(link , text)
     li.bread-crambs__item
         a.bread-crambs__link(href= link)= text
         |  /
+
+//- Добавление Checkbox для accordion__body
+mixin check-list(text, i, checked)
+    li.check-list__item
+        input(type="checkbox" value="value1" id= i checked= checked).styled-checkbox
+        label(for= i).check-list__text= text

@@ -26,3 +26,21 @@
 
 	&__body 
 		padding: 0 30px 25px
+		.slider-value
+			font: 400 14px $font-family
+			color: #b8b8b8
+			margin: 15px 0
+			display: inline-block;
+			vertical-align: top;
+			margin-right: -4px;
+			width: 50%;
+			&::before
+				font: 700 14px $font-family
+			&.slider-value-min
+				&::before
+					content: 'min: '
+			&.slider-value-max
+				text-align: right
+				&::before
+					content: 'max: '
+@import '../components/checkList'

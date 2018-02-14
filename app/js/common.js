@@ -19,4 +19,30 @@ $(function(){
 	});
 });
 
-   
+const slider = document.getElementById('slider');
+
+noUiSlider.create(slider, {
+	start: [0, 100],
+	connect: true,
+	step: 5,
+	range: {
+		'min': 0,
+		'max': 100
+	},
+	format: {
+		to: function ( value ) {
+		  return '&#36;' + value;
+		},
+		from: function ( value ) {
+		  return value.replace('&#36;', '');
+		}
+	  }
+});
+var skipValues = [
+	document.getElementById('amount'),
+	document.getElementById('amount1')
+];
+
+slider.noUiSlider.on('update', function( values, handle ) {
+	skipValues[handle].innerHTML = values[handle];
+});
