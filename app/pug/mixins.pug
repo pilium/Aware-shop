@@ -46,3 +46,46 @@ mixin check-list(text, i, checked)
     li.check-list__item
         input(type="checkbox" value="value1" id= i checked= checked).styled-checkbox
         label(for= i).check-list__text= text
+
+//- Карточка товара
+mixin product(title, category, price, discount, productmod)
+    - var  mod1 = productmod || ''
+    .product
+        .product__img
+            img(src='img/1.png' alt='')
+        .product__content
+            h6.product__title
+                a(href='#')= title
+            span.product__category= category
+        case mod1
+            when 'sale'
+                .product__footer.sale
+                    span.price= price
+                    span.pbadge
+                        img(src='img/sale.png' alt='')
+                    span.discount= discount
+            when 'hit'
+                .product__footer.hit
+                    span.price= price
+                    span.pbadge
+                        img(src='img/hit.png' alt='')
+            when 'new'
+                .product__footer.new
+                    span.pbadge
+                        img(src='img/new.png' alt='')
+                    span.price= price
+            default
+                .product__footer
+                    span.price= price
+        .product__card
+            select.styler
+                option(value='') size
+                option(value='') S
+                option(value='') L
+                option(value='') M
+            a.btn(href='#') Add to cart
+            br
+            a.favorite(href='#')
+                span.icon.icon-heart-plus Add to wishlist
+
+    
