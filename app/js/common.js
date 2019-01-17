@@ -1,8 +1,8 @@
 // TABS(filters)
 
-$(function(){
+$(function () {
 
-	$('.tabs a').click(function(){
+	$('.tabs a').click(function () {
 		$(this).parents('.main').find('.tab-cont').addClass('hide');
 		$(this).parent().siblings().removeClass('active');
 		var id = $(this).attr('href');
@@ -11,12 +11,23 @@ $(function(){
 		return false
 	});
 
-	$('.accordion__head').on('click', function(){
+	$('.accordion__head').on('click', function () {
 		var el = $(this);
 		el.next('.accordion__body').slideToggle();
 		el.toggleClass('open');
 		return false;
 	});
+
+	$('.toggle-filter').click(function () {
+		$(this).toggleClass('active');
+		$('.sidebar').toggleClass('open');
+		$('.box-product').toggleClass('full');
+	})
+
+	$('.toggle-menu').click(function () {
+		$(this).toggleClass('active');
+		$('.dropdown-content--menu').toggleClass('open');
+	})
 });
 
 const slider = document.getElementById('slider');
@@ -30,19 +41,19 @@ noUiSlider.create(slider, {
 		'max': 100
 	},
 	format: {
-		to: function ( value ) {
-		  return '&#36;' + value;
+		to: function (value) {
+			return '&#36;' + value;
 		},
-		from: function ( value ) {
-		  return value.replace('&#36;', '');
+		from: function (value) {
+			return value.replace('&#36;', '');
 		}
-	  }
+	}
 });
 var skipValues = [
 	document.getElementById('amount'),
 	document.getElementById('amount1')
 ];
 
-slider.noUiSlider.on('update', function( values, handle ) {
+slider.noUiSlider.on('update', function (values, handle) {
 	skipValues[handle].innerHTML = values[handle];
 });

@@ -1,19 +1,225 @@
-@media screen and (min-width: 992px)
-    .product:not(.product--horizontal):hover 
-        .product__title, .price
-            color: #fff
-        .product__footer
-            position: relative
-            z-index: 2
-
-        .product__card 
-            z-index: 2
-            opacity: 1
-            visibility: visible
-
-        &:before 
-            height: 100%
-            width: 100%
-            left: 0
-            top: 0
-			
+@media screen and (max-width: 1850px)
+  .box-main .content 
+    .product
+      width: 16.666%
+      &__card 
+        .btn
+          margin-left: 5px
+@media screen and (max-width: 1559px)
+    .box-main .content 
+      .product
+        width: 20%
+    .header
+      .logo,
+      .main-menu,
+      .search,
+      .location
+        margin-right: 20px
+@media screen and (max-width: 1399px)
+  .header
+    position: relative
+    .main-menu
+      display: none
+    .toggle-menu 
+      display: block
+      border: none
+      padding: 0
+      background-color: transparent
+      margin-right: 35px
+      font-size: 18px
+    .logo,
+    .search,
+    .location
+      margin-right: 40px
+    .dropdown-content
+      z-index: 2
+      &__item
+        padding: 30px
+        width: 25%
+        &:not(:last-child)
+          border-right: 1px solid #353535
+      &__title
+        color: #fff
+        font-size: 14px
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 1.4px
+        margin-bottom: 17px
+        line-height: 30px
+      &--menu
+        padding: 0
+        display: flex
+        width: 100%
+        &.open
+          opacity: 1
+          margin-top: 0
+          left: 0
+          visibility: visible
+        &::before
+          left: 30px
+    .dropdown-menu + .dropdown-content__title
+      margin-top: 45px
+    .hr
+      height: 1px
+      background-color: #353535
+      margin: 25px 0
+  .box-main .content 
+    .product
+      width: 25%
+@media screen and (max-width: 1180px)
+  .box-main .content 
+    .product
+      width: 25%
+@media screen and (max-width: 960px)
+  .filter-sidebar
+    width: auto
+    border-right: none
+  .toggle-filter
+    height: 30px
+    display: flex
+    align-items: center
+    border: 2px solid #d5d5d5
+    width: 120px
+    padding: 0 20px
+    border-radius: 20px
+    font-family: $font-family
+    &:hover
+      color: #d5d5d5
+    &.active
+      color: #1f4ba5
+      border-color: #1f4ba5
+    .sr-only
+      display: inline-block
+      font-size: 12px
+      font-weight: 400
+      line-height: 12px
+      margin-left: 15px
+      padding-top: 1px
+  .box-main
+    position: relative
+    .content
+      transition: transform 0.4s
+      .product
+        width: 25%
+      .box-product.full
+		    .product 
+		      width: 33.33%
+    .sidebar
+      margin-left: -240px
+      height: 100%
+      overflow-y: auto
+      position: absolute
+      &.open
+        margin-left: 0
+      &.open + .content
+        transform: translate(240px, 0)
+      &.open +  div.content .product
+        width: 24%
+@media screen and (max-width: 930px)
+  .box-main .content 
+    .product
+      width: 30%
+    .box-product.full
+		  .product 
+		    width: 50%
+@media screen and (max-width: 768px)
+  .hidden-ipad
+    display: none
+@media screen and (max-width: 767px)
+  .header
+    padding-left: 20px
+    padding-right: 20px
+    height: 65px
+    .toggle-menu,
+    .logo,
+    .main-menu,
+    .location
+      margin-right: 25px
+    .search
+      margin-right: 15px
+    .location,
+    .hidden-iphone
+      display: none
+    .profile-menu
+      margin-right: -10px
+      &__link
+        line-height: 65px
+        padding: 0 10px
+    .header-inner
+      padding-left: 20px
+      padding-right: 20px
+      .bread-crambs
+        left: 20px
+  .box-main .content
+    .box-product .product-title
+      height: auto
+    .box-product.full
+      .product 
+        width: 50%
+    .product
+      width: 50%
+      padding-left: 20px
+      padding-right: 20px
+      &__img
+        margin: 22px 0 35px
+      &--horizontal
+        .product__img, .product__content, .product__footer
+          margin-right: 20px
+  .filter
+    flex-direction: column
+    &-sidebar
+      padding-left: 20px
+      padding-right: 20px
+      border: 1px solid #ececec
+    &-content
+      padding-left: 20px
+      padding-right: 20px
+      .filter__title
+        display: none
+  .sort__item
+    margin-left: 0
+    margin-right: 13px
+  .paginator
+    padding: 0 20px
+    &__item
+      font-size: 10px
+      &.load .icon
+        white-space: nowrap
+        &::before
+          margin-right: 2px
+  .header-inner
+    min-height: 150px
+    height: auto
+    padding-top: 40px
+    padding-bottom: 40px
+    .bread-crambs
+      top: 25%
+      transform: none
+    &__title
+      font-size: 28px
+      line-height: 35px
+@media screen and (max-width: 680px)
+ .box-main .content
+    .product
+      &--horizontal 
+        flex-wrap: wrap
+        .product__img 
+          margin-bottom: 20px		
+        .product__content
+          margin-right: 0
+          min-width: 50%
+          margin-bottom: 20px
+        .product__footer, .product__card 
+          width: 73.2%
+          margin-right: 0
+        .product__footer 
+          width: 75px
+          padding-left: 10px
+@media screen and (max-width: 479px)
+  .box-main .content
+    .product, .box-product.full .product
+      width: 100%
+  .b-price, .search__button
+    display: none
+  .search__input
+    padding: 0 15px

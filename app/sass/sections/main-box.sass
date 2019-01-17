@@ -10,7 +10,6 @@
 		.box-product
 			display: flex
 			flex-wrap: wrap
-			margin-right: -1px
 			.product__title
 				height: 30px
 				overflow: hidden
@@ -21,6 +20,23 @@
 			width: 14.285%
 			padding: 26px 30px
 			text-align: center
+			&:not(.product--horizontal):hover 
+				.product__title, .price
+					color: #fff
+				.product__footer
+					position: relative
+					z-index: 2
+
+				.product__card 
+					z-index: 2
+					opacity: 1
+					visibility: visible
+
+				&:before 
+					height: 100%
+					width: 100%
+					left: 0
+					top: 0
 			&:before
 				content: ''
 				display: block
@@ -57,13 +73,12 @@
 				opacity: 0
 				visibility: hidden
 				position: absolute
-				left: -30px
-				right: -30px
 				padding: 0 10px
 				text-align: center
-				
+				width: 100%
 				top: 50%
-				transform: translate(0,-50%)
+				left: 50%
+				transform: translate(-50%,-50%)
 				transition: all 0.4s
 				.btn
 					margin-left: 10px
@@ -149,8 +164,6 @@
 				// &:hover
 				// 	.product__title, .price
 				// 		color: $color
-
-
 
 		.discount
 			color: #a1a1a1
