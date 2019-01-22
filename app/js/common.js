@@ -28,8 +28,23 @@ $(function () {
 		$(this).toggleClass('active');
 		$('.dropdown-content--menu').toggleClass('open');
 	})
-});
 
+	$('.dropdown-content__title').click(function(){
+		$(this).toggleClass('d-open');
+	})
+
+	$('.filter-checkbox').on('change',function() {
+		var filter = this.value;
+		var products = document.querySelectorAll('.product');
+				
+		for(var i = 0; i < products.length; i++) {
+			if(products[i].classList.contains(filter)) {
+				products[i].classList.toggle('fl-show');
+			}
+		}
+	})
+
+});
 const slider = document.getElementById('slider');
 
 noUiSlider.create(slider, {
