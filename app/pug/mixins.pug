@@ -48,9 +48,10 @@ mixin check-list(text, i, checked)
         label(for= i).check-list__text= text
 
 //- Карточка товара
-mixin product(title, category, price, discount, productmod)
+mixin product(title, category, price, discount, productmod, producttype)
     - var  mod1 = productmod || ''
-    .product
+    - var  mod2 = producttype || '' 
+    .product(class=mod2 class=mod1)
         .product__img
             img(src='img/1.png' alt='')
         .product__content
@@ -78,7 +79,7 @@ mixin product(title, category, price, discount, productmod)
                 .product__footer
                     span.price= price
         .product__card
-            select.styler
+            select.select-css
                 option(value='') size
                 option(value='') S
                 option(value='') L

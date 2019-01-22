@@ -4,17 +4,15 @@
 		span.icon-minus
 	.accordion__body
 		ul.check-list
-			+check-list('Bags', 1)
-			+check-list('Belts', 2)
-			+check-list('Hats, Scarves & Gloves', 3)
-			+check-list('Sunglasses', 4)
-			+check-list('Watches', 5)
-			+check-list('Wallets', 6)
-			+check-list('Boat Shoes', 7)
-			+check-list('Boots', 8)
-			+check-list('Deserts & Chukkas', 9)
-			+check-list('Espadrilles & Sandals', 10)
-			+check-list('Flip Flops', 11)
+			li.check-list__item
+				input(type="checkbox" value="sale" id='one' checked).filter-checkbox.styled-checkbox
+				label(for="one").check-list__text Sale
+			li.check-list__item
+				input(type="checkbox" value="hit" id="two" checked).filter-checkbox.styled-checkbox
+				label(for="two").check-list__text Hit
+			li.check-list__item
+				input(type="checkbox" value="new" id="three" checked).filter-checkbox.styled-checkbox
+				label(for="three").check-list__text New
 	.accordion__head
 		h5.accordion__title Brand
 		span.icon-minus

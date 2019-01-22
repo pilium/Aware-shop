@@ -8,26 +8,26 @@
 		.filter-content
 			span.filter__title Sort by
 			.sort
-				input#sort1(type="radio" name="sort")
+				input#sort1.filter-sort(type="radio" name="sort" value="price")
 				label.sort__item(for="sort1")
 					| Price 
 					span.icon-arrow-up-down
 						span.path1
 						
-				input#sort2(type="radio" name="sort" checked="")
+				input#sort2.filter-sort(type="radio" name="sort" checked="" value="name")
 				label.sort__item(for="sort2")
 					| Name 
 					span.icon-arrow-up-down
 						span.path1
-				input#sort3(type="radio" name="sort")
+				input#sort3.filter-sort(type="radio" name="sort" value="date")
 				label.sort__item(for="sort3")
 					| Date 
 					span.icon-arrow-up-down
 						span.path1
 			ul.filter-list.tabs
-				li.filter-list__item
+				li.filter-list__item.active
 					a.filter-list__link(href="#tab_1")
 						span.icon-list-2
-				li.filter-list__item.active
+				li.filter-list__item
 					a.filter-list__link(href="#tab_2")
 						span.icon-list
