@@ -1,4 +1,3 @@
-// TABS(filters)
 
 $(function () {
 
