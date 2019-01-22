@@ -87,7 +87,7 @@
         </div>
         <div class="dropdown-content__item"></div>
       </div>
-      <div class="logo"><a href="#"><img src="img/logo.png" alt=""></a></div>
+      <div class="logo"><a href="#"><img class="hidden-iphone" src="img/logo.png" alt="логотип"><img class="hidden-ipad" src="img/logo-mobile.png" alt="логотип"></a></div>
       <ul class="main-menu">
         <li class="main-menu__item dropdown"><a class="main-menu__link" href="#">Men<span class="icon-caret"></span></a>
           <div class="dropdown-content">
@@ -224,16 +224,16 @@
           </div>
           <div class="filter-content"><span class="filter__title">Sort by</span>
             <div class="sort">
-              <input id="sort1" type="radio" name="sort">
+              <input class="filter-sort" id="sort1" type="radio" name="sort" value="price">
               <label class="sort__item" for="sort1">Price <span class="icon-arrow-up-down"><span class="path1"></span></span></label>
-              <input id="sort2" type="radio" name="sort" checked="">
+              <input class="filter-sort" id="sort2" type="radio" name="sort" checked="" value="name">
               <label class="sort__item" for="sort2">Name <span class="icon-arrow-up-down"><span class="path1"></span></span></label>
-              <input id="sort3" type="radio" name="sort">
+              <input class="filter-sort" id="sort3" type="radio" name="sort" value="date">
               <label class="sort__item" for="sort3">Date <span class="icon-arrow-up-down"><span class="path1"></span></span></label>
             </div>
             <ul class="filter-list tabs">
-              <li class="filter-list__item"><a class="filter-list__link" href="#tab_1"><span class="icon-list-2"></span></a></li>
-              <li class="filter-list__item active"><a class="filter-list__link" href="#tab_2"><span class="icon-list"></span></a></li>
+              <li class="filter-list__item active"><a class="filter-list__link" href="#tab_1"><span class="icon-list-2"></span></a></li>
+              <li class="filter-list__item"><a class="filter-list__link" href="#tab_2"><span class="icon-list"></span></a></li>
             </ul>
           </div>
         </div>
@@ -246,50 +246,18 @@
             </div>
             <div class="accordion__body">
               <ul class="check-list">
-                    <li class="check-list__item">
-                      <input class="styled-checkbox" type="checkbox" value="value1" id="1">
-                      <label class="check-list__text" for="1">Bags</label>
-                    </li>
-                    <li class="check-list__item">
-                      <input class="styled-checkbox" type="checkbox" value="value1" id="2">
-                      <label class="check-list__text" for="2">Belts</label>
-                    </li>
-                    <li class="check-list__item">
-                      <input class="styled-checkbox" type="checkbox" value="value1" id="3">
-                      <label class="check-list__text" for="3">Hats, Scarves &amp; Gloves</label>
-                    </li>
-                    <li class="check-list__item">
-                      <input class="styled-checkbox" type="checkbox" value="value1" id="4">
-                      <label class="check-list__text" for="4">Sunglasses</label>
-                    </li>
-                    <li class="check-list__item">
-                      <input class="styled-checkbox" type="checkbox" value="value1" id="5">
-                      <label class="check-list__text" for="5">Watches</label>
-                    </li>
-                    <li class="check-list__item">
-                      <input class="styled-checkbox" type="checkbox" value="value1" id="6">
-                      <label class="check-list__text" for="6">Wallets</label>
-                    </li>
-                    <li class="check-list__item">
-                      <input class="styled-checkbox" type="checkbox" value="value1" id="7">
-                      <label class="check-list__text" for="7">Boat Shoes</label>
-                    </li>
-                    <li class="check-list__item">
-                      <input class="styled-checkbox" type="checkbox" value="value1" id="8">
-                      <label class="check-list__text" for="8">Boots</label>
-                    </li>
-                    <li class="check-list__item">
-                      <input class="styled-checkbox" type="checkbox" value="value1" id="9">
-                      <label class="check-list__text" for="9">Deserts &amp; Chukkas</label>
-                    </li>
-                    <li class="check-list__item">
-                      <input class="styled-checkbox" type="checkbox" value="value1" id="10">
-                      <label class="check-list__text" for="10">Espadrilles &amp; Sandals</label>
-                    </li>
-                    <li class="check-list__item">
-                      <input class="styled-checkbox" type="checkbox" value="value1" id="11">
-                      <label class="check-list__text" for="11">Flip Flops</label>
-                    </li>
+                <li class="check-list__item">
+                  <input class="filter-checkbox styled-checkbox" type="checkbox" value="sale" id="one" checked>
+                  <label class="check-list__text" for="one">Sale</label>
+                </li>
+                <li class="check-list__item">
+                  <input class="filter-checkbox styled-checkbox" type="checkbox" value="hit" id="two" checked>
+                  <label class="check-list__text" for="two">Hit</label>
+                </li>
+                <li class="check-list__item">
+                  <input class="filter-checkbox styled-checkbox" type="checkbox" value="new" id="three" checked>
+                  <label class="check-list__text" for="three">New</label>
+                </li>
               </ul>
             </div>
             <div class="accordion__head">
@@ -383,16 +351,16 @@
         </aside>
         <div class="content">
           <div class="box-tab-cont">
-            <div class="tab-cont hide" id="tab_1"> 
+            <div class="tab-cont" id="tab_1"> 
               <div class="box-product">
-                    <div class="product">
+                    <div class="product hit">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer hit"><span class="price">100$</span><span class="pbadge"><img src="img/hit.png" alt=""></span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -400,14 +368,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product sale">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer sale"><span class="price">$85$</span><span class="pbadge"><img src="img/sale.png" alt=""></span><span class="discount">70$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -415,14 +383,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product new">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer new"><span class="pbadge"><img src="img/new.png" alt=""></span><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -430,14 +398,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product new">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer new"><span class="pbadge"><img src="img/new.png" alt=""></span><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -445,14 +413,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product sale">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer sale"><span class="price">$85$</span><span class="pbadge"><img src="img/sale.png" alt=""></span><span class="discount">70$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -460,14 +428,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product sale">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer sale"><span class="price">$85$</span><span class="pbadge"><img src="img/sale.png" alt=""></span><span class="discount">70$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -475,14 +443,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product sale">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer sale"><span class="price">$85$</span><span class="pbadge"><img src="img/sale.png" alt=""></span><span class="discount">70$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -490,14 +458,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product sale">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer sale"><span class="price">$85$</span><span class="pbadge"><img src="img/sale.png" alt=""></span><span class="discount">70$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -505,14 +473,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product sale">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer sale"><span class="price">$85$</span><span class="pbadge"><img src="img/sale.png" alt=""></span><span class="discount">70$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -520,14 +488,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product sale">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer sale"><span class="price">$85$</span><span class="pbadge"><img src="img/sale.png" alt=""></span><span class="discount">70$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -535,14 +503,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product sale">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer sale"><span class="price">$85$</span><span class="pbadge"><img src="img/sale.png" alt=""></span><span class="discount">70$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -550,14 +518,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product sale">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer sale"><span class="price">$85$</span><span class="pbadge"><img src="img/sale.png" alt=""></span><span class="discount">70$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -565,14 +533,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product sale">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer sale"><span class="price">$85$</span><span class="pbadge"><img src="img/sale.png" alt=""></span><span class="discount">70$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -580,14 +548,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product new">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer new"><span class="pbadge"><img src="img/new.png" alt=""></span><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -595,14 +563,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product hit">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer hit"><span class="price">$85$</span><span class="pbadge"><img src="img/hit.png" alt=""></span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -617,7 +585,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -625,14 +593,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product new">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer new"><span class="pbadge"><img src="img/new.png" alt=""></span><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -640,14 +608,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product new">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer new"><span class="pbadge"><img src="img/new.png" alt=""></span><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -662,7 +630,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -677,7 +645,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -692,7 +660,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -707,7 +675,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -722,7 +690,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -737,7 +705,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -752,7 +720,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -767,7 +735,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -782,7 +750,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -797,7 +765,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -812,7 +780,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -820,14 +788,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product new">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer new"><span class="pbadge"><img src="img/new.png" alt=""></span><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -835,14 +803,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product new">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer new"><span class="pbadge"><img src="img/new.png" alt=""></span><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -850,14 +818,14 @@
                         </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
                       </div>
                     </div>
-                    <div class="product">
+                    <div class="product new">
                       <div class="product__img"><img src="img/1.png" alt=""></div>
                       <div class="product__content">
                         <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
                       </div>
                       <div class="product__footer new"><span class="pbadge"><img src="img/new.png" alt=""></span><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -872,7 +840,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -887,7 +855,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -902,7 +870,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -917,7 +885,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -932,7 +900,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -947,7 +915,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -962,7 +930,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -977,7 +945,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -992,7 +960,7 @@
                       </div>
                       <div class="product__footer"><span class="price">$85$</span></div>
                       <div class="product__card">
-                        <select class="styler">
+                        <select class="select-css">
                           <option value="">size</option>
                           <option value="">S</option>
                           <option value="">L</option>
@@ -1002,7 +970,728 @@
                     </div>
               </div>
             </div>
-            <div class="tab-cont" id="tab_2">.22222..</div>
+            <div class="tab-cont hide" id="tab_2">
+                  <div class="product product--horizontal hit">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer hit"><span class="price">$85$</span><span class="pbadge"><img src="img/hit.png" alt=""></span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal new">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer new"><span class="pbadge"><img src="img/new.png" alt=""></span><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal sale">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer sale"><span class="price">$85$</span><span class="pbadge"><img src="img/sale.png" alt=""></span><span class="discount">70$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+                  <div class="product product--horizontal">
+                    <div class="product__img"><img src="img/1.png" alt=""></div>
+                    <div class="product__content">
+                      <h6 class="product__title"><a href="#">Lacoste Men's Pocket Polo Shirt - Sahara</a></h6><span class="product__category">Blazers</span>
+                    </div>
+                    <div class="product__footer"><span class="price">$85$</span></div>
+                    <div class="product__card">
+                      <select class="select-css">
+                        <option value="">size</option>
+                        <option value="">S</option>
+                        <option value="">L</option>
+                        <option value="">M</option>
+                      </select><a class="btn" href="#">Add to cart</a><br><a class="favorite" href="#"><span class="icon icon-heart-plus">Add to wishlist</span></a>
+                    </div>
+                  </div>
+            </div>
           </div>
           <div class="paginator"><span class="paginator__item">2 page of 23</span><span class="paginator__item load"><span class="icon icon-reload">Load more</span></span><span class="paginator__item">30 items</span></div>
         </div>

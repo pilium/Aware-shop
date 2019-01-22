@@ -122,7 +122,7 @@
     .box-product.full
 		  .product 
 		    width: 50%
-@media screen and (max-width: 768px)
+@media screen and (min-width: 768px)
   .hidden-ipad
     display: none
 @media screen and (max-width: 767px)
@@ -140,6 +140,31 @@
     .location,
     .hidden-iphone
       display: none
+    .dropdown-content--menu
+      display: block	
+    .dropdown-content__item
+      width: auto
+      padding: 0
+      .hr
+        display: none
+    .dropdown-menu
+      display: none
+      padding-left: 30px
+      padding-bottom: 20px
+      border-bottom: 1px solid #353535
+    .dropdown-content__title
+      padding: 15px 20px
+      margin-bottom: 0
+      border-bottom: 1px solid #353535
+      br 
+        display: none	
+      &.d-open 
+        border-bottom-color: transparent
+        & + .dropdown-menu
+          display: block
+    .dropdown-menu + .dropdown-content__title
+      margin-top: 0
+
     .profile-menu
       margin-right: -10px
       &__link
